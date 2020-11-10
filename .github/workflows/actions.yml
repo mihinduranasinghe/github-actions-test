@@ -1,4 +1,4 @@
-name: Actions wordkflow
+name: Actions worrkflow with hello-world-github-actions
 
 on: [push]
 
