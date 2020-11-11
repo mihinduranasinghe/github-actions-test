@@ -1,4 +1,4 @@
-name: Actions worrkflow with hello-world-github-actions
+name: Actions worrkflow on Push with hello-world-github-actions
 
 on: [push]
 
@@ -34,5 +34,5 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo "${{github.token}}"
-          # echo clone gi@github:$GITHUB_REPOSITORY
+          # echo clone git@github:$GITHUB_REPOSITORY
           # git checkout $GITHUB_SHA
