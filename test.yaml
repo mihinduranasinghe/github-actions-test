@@ -25,6 +25,4 @@ objectsArray:
   - key: value
     key1.1: value1.1
   - key2: value
-longText: |
-  dadada dadasdsa dadadada dadasdasd 
-  dasdadasda dadadad adad adada asdada
+longText: "dadada dadasdsa dadadada dadasdasd \ndasdadasda dadadad adad adada asdada\n"
