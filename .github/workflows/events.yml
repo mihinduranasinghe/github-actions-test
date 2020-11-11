@@ -1,4 +1,4 @@
-name: Actions worrkflow with other events like pull_request...etc
+name: Action worrkflow with other events like pull_request...etc
 
 on: [push, pull_request]
 
