@@ -1,6 +1,10 @@
 name: Action worrkflow with other events like pull_request...etc
 
-on: [push, pull_request]
+# on: [push, pull_request]
+
+on:
+  pull_request:
+    types: [closed, assigned, opened, reopened]
 
 jobs:
   run-github-actions:
