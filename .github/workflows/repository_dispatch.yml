@@ -1,0 +1,14 @@
+name: repository dispatch trigger a workflow from external API request
+
+on:
+  repository_dispatch:
+    types: [build] # this will only runs if the POST request sends "build" in event_type
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello Im triggerred with repository_dispatch POST request"
+      - name: echo payload
+        run: echo ${{ github.event.client_payload.env }}
