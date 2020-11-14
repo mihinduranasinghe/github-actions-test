@@ -1,0 +1,27 @@
+name: Filtering the Action Workflow Triggering based on our requirement
+
+on:
+  push:
+    # branches-ignore:
+    branches:
+      - main
+      - "feature/*" #matches feature/feature1 feature/feature2 feature/feature3
+
+    # tags-ignore:
+    #   - ""
+    tags:
+      - v1.*
+
+    paths:
+      - "**.js"
+      - "docs/**"
+
+    # paths-ignore:
+    #   - ""
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello Im triggerred with filtering and only when pushed to main"
