@@ -1,0 +1,19 @@
+name: Scheduled Actions workflow with cron
+
+on:
+  schedule:
+    # - cron: "0/5 * * * *" #Each 5 minutes workflow will br triggered
+    - cron: "0 12 1 1 *" #Every year at january 1st at 12.00
+  # - cron: "* * * * *" #Every minute
+  # See the book for more examples
+  # Go to > crontab.guru to play with cron more
+
+  pull_request:
+    types: [closed, assigned, opened, reopened]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello Im scheduled with cron"
