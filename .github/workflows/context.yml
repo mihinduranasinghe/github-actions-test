@@ -1,6 +1,6 @@
 name: Expressions & Contexts
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   one:
@@ -33,6 +33,10 @@ jobs:
 
   functions:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    # this will only runs for push requests not for pull requests
+    # if: always()
+    # if: failure()
     steps:
       - name: Dump GitHub functions in workflow
         run: |
