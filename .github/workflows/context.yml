@@ -30,3 +30,13 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
+
+  functions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub functions in workflow
+        run: |
+          echo ${{contains('hello',' 11')}}
+          echo ${{startsWith('hello',' he')}}
+          echo ${{endsWith('hello',' lo')}}
+          echo ${{format('hello {0} {1} {2}', 'world', '!', '!')}}
